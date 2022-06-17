@@ -1,0 +1,63 @@
+/* ############### General ############### */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: 'Raleway';
+  font-style: normal;
+}
+
+.body__wrapper {
+  position: relative;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+/* ############### Header ############### */
+.header {
+  width: 100vw;
+  height: fit-content;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header__wrapper {
+  max-width: 1920px;
+  height: 100%;
+  padding: 0 32px;
+}
+
+.header__top {
+  height: 40px;
+  width: 100%;
+}
+
+.header__text_contact {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.header__bot {
+  height: 80px;
+  width: 100%;
+}
+
+
+
+
+
+
+/* ############### Banner ############### */

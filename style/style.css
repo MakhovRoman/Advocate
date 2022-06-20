@@ -211,14 +211,14 @@ body {
   padding-top: calc(var(--header-bot-height) + var(--header-top-height) + 64px);
   padding-bottom: 64px;
   background: rgba(0, 66, 70, 1);
-  //transform: translateY(calc(-100% - var(--header-bot-height) - var(--header-top-height)));
+  transform: translateY(calc(-100% - var(--header-bot-height) - var(--header-top-height)));
   transform-origin: top;
   transition: 0.3s ease-in-out;
   z-index: -1;
 }
 
 #services:hover .header__subnav {
-  //transform: translateY(calc(0px - var(--header-bot-height) - var(--header-top-height)));
+  transform: translateY(calc(0px - var(--header-bot-height) - var(--header-top-height)));
   transition: 0.3s ease-in-out;
 }
 
@@ -241,8 +241,25 @@ body {
 .subnav__title-li {
   font-size: 24px;
   line-height: 36px;
-  padding: 16px 0;
 }
+
+.subnav__link {
+  padding: 16px 64px 16px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.subnav__arrow {
+  filter: opacity(0.3);
+  transition: 0.3s;
+}
+
+.subnav__link:hover .subnav__arrow{
+  filter: opacity(1);
+  transition: 0.3s;
+}
+
+
 
 
 /* ############### Banner ############### */

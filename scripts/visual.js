@@ -99,7 +99,6 @@ subnavTitleLi.forEach( (item, index) => {
   let child = item.querySelector('.subnav__child-list');
   if(child) {
     child.style.top = -index * parseInt(getComputedStyle(item).height) + 'px';
-    console.log(getComputedStyle(item).height)
   }
 })
 

@@ -193,9 +193,13 @@
                 <p class="paragraph text_dark">Оставьте номер телефона и мы перезвоним вам</p>
               </div>
               <form action="" class="banner__form content__container">
-                <input type="text" placeholder="Ваше Имя" class="input__text input__name input__text_style">
-                <input type="tel" placeholder="Номер телефона" class="input__text input__tel input__text_style">
-                <button type="submit" class="form__button input__text_style">Отправить</button>
+                <input type="text" placeholder="Ваше Имя" class="banner__input-name input__text input__name input__text_style" name="personalName" pattern="[A-Za-zА-Яа-яЁё\s\-\']" required>
+                <input type="tel" placeholder="Номер телефона" class="banner__input-tel input__text input__tel input__text_style" name="personalTel" data-mask="+7 ___ ___ __ __" required>
+                <button type="submit" class="form__button input__text_style banner__input-submit">Отправить</button>
+                <div class="form__unit-personal">
+                  <input type="radio" id="personalData" class="input__radio " name="personalData" value="1" checked>
+                  <label for="personalData" class="input__radio-label">Даю согласие на обработку персональных данных.</label>
+                </div>
               </form>
             </div>
           </div>
@@ -203,5 +207,6 @@
       </section>
     </div>
     <script src="scripts/visual.js"></script>
+    <script src="scripts/form.js"></script>
   </body>
 </html>

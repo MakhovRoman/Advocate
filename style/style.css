@@ -45,7 +45,58 @@ body {
   width: 100%;
 }
 
+.text_dark {
+  color: rgba(224, 219, 218, 1);
+}
 
+.heading_large {
+  font-size: 56px;
+  line-height: 66px;
+  font-weight: 700;
+}
+
+.heading_semilarge {
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.heading_medium {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.paragraph {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.input__text {
+  height: 64px;
+  cursor: pointer;
+  padding: 18.5px 16px;
+
+}
+
+.input__text_style {
+  color: rgba(189, 189, 189, 1);
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 27px;
+  background-color: transparent;
+  border: 1px solid rgba(224, 219, 218, 0.3);
+}
+
+.input__text::placeholder {
+  color: rgba(189, 189, 189, 1);
+}
+
+.form__button {
+
+  width: 264px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
 
 
 /* ############### Header ############### */
@@ -214,19 +265,21 @@ body {
   position: absolute;
   left: 0;
   top: calc(100% + 1px + var(--header-bot-height));
-  height: fit-content;
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 120px;
   background: rgba(0, 66, 70, 1);
-  transform: translateY(calc(-100% - var(--header-bot-height) - var(--header-top-height)));
+  transform: translateY(calc(-100% - var(--header-bot-height) * 2 - var(--header-top-height)));
   transform-origin: top;
   transition: 0.3s ease-in-out;
   z-index: -1;
 }
 
 #services:hover .header__subnav {
-  transform: translateY(calc(0px - var(--header-bot-height) - var(--header-top-height)));
+  transform: translateY(calc(0px - var(--header-bot-height) * 2 - var(--header-top-height)));
   transition: 0.3s ease-in-out;
+}
+
+.subnav__wrapper {
+  padding: 64px 0;
 }
 
 .subnav__content {
@@ -313,6 +366,7 @@ body {
 .banner {
   height: 100vh;
   position: relative;
+  color: rgb(255, 255, 255);
 }
 
 .banner__picture {
@@ -346,4 +400,32 @@ body {
   height: 500px;
   background-color: rgb(0, 0, 0);
   z-index: 5;
+  grid-template-rows: repeat(2, 1fr);
+  grid-row-gap: auto;
+}
+
+.banner__unit-text, .banner__unit-form {
+  grid-column: 1/13;
+}
+
+.banner__unit-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.banner__heading_large {
+  margin-bottom: 16px;
+}
+
+.banner__heading_semilarge {
+  margin-bottom: 8px;
+}
+
+.input__name {
+  grid-column: 1/4;
+}
+
+.input__tel {
+  grid-column: 4/7;
 }

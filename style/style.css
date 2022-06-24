@@ -115,6 +115,22 @@ body {
   display: none;
 }
 
+.section__content {
+  padding: 144px 0;
+}
+
+.content__img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.section__heading_medium {
+  font-size: 24px;
+  line-height: 36px;
+}
+
 
 /* ############### Header ############### */
 
@@ -380,6 +396,7 @@ body {
 }
 
 /* ############### Banner ############### */
+
 .banner {
   height: 100vh;
   position: relative;
@@ -398,9 +415,7 @@ body {
 .banner__img {
   position: absolute;
   height: 100%;
-  width: 100%;
-  max-width: 100%;
-  object-fit: cover;
+
   z-index: 1;
 }
 
@@ -468,4 +483,39 @@ body {
   left: -28px;
   height: 100%;
   width: 20px;
+}
+
+/* ############### Chief ############### */
+
+.chief__photo-container {
+  grid-column: 1/6;
+  width: 100%;
+  height: fit-content;
+}
+
+.chief__text-container {
+  grid-column: 7/13;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.chief__unit_heading {
+  width: fit-content;
+  height: 97px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chief__heading_medium {
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.chief__achives {
+  list-style: none;
+  padding-left: 16px;
+  margin-top: 64px;
 }

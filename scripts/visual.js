@@ -59,40 +59,6 @@ const subnavMenu      = getElement('subnav__title-list');
 let   subnavTitleList = Array.from(document.getElementsByClassName('subnav__title-link'));
 let   subnavTitleLi   = Array.from(document.getElementsByClassName('subnav__title-li'));
 
-/*
-let isOpen = false;
-let timerId;
-
-subnavMenu.addEventListener('mouseover', e => {
-  let that = e.target;
-
-  if (!isOpen && that.classList.contains('subnav__link')) {
-    isOpen = true;
-    timerId = setTimeout( () => {
-
-      that.classList.add('subnav-link_active');
-      subnavTitleList.forEach(item => {
-        if (item.classList.contains('subnav-link_active') && item != that) {
-          item.classList.remove('subnav-link_active');
-        }
-      })
-    }, 500)
-  }
-})
-
-subnavMenu.addEventListener('mouseout', e => {
-  let that = e.target;
-  clearTimeout(timerId);
-  isOpen = false;
-
-  setTimeout( () => {
-    if (that.classList.contains('subnav-link_active')) {
-      that.classList.remove('subnav-link_active');
-
-    }
-  }, 500)
-})
-*/
 
 //top position of subnavMenu
 subnavTitleLi.forEach( (item, index) => {

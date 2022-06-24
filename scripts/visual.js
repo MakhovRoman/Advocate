@@ -55,6 +55,8 @@ function hoverDelay(parrentElement, childrenList, childrenClassName, className, 
 const header          = getElement('header');
 const headerWrapper   = getElement('header__wrapper');
 const headerSubnav    = getElement('header__subnav');
+const headerTop       = getElement('header__top');
+const headerBot       = getElement('header__bot');
 const subnavMenu      = getElement('subnav__title-list');
 let   subnavTitleList = Array.from(document.getElementsByClassName('subnav__title-link'));
 let   subnavTitleLi   = Array.from(document.getElementsByClassName('subnav__title-li'));
@@ -72,3 +74,15 @@ subnavTitleLi.forEach( (item, index) => {
 hoverDelay(subnavMenu, subnavTitleList, 'subnav__link', 'subnav-link_active', 500);
 window.addEventListener('DOMContentLoaded', () => resizing(headerWrapper, headerSubnav));
 window.addEventListener('resize', () => resizing(headerWrapper, headerSubnav));
+window.addEventListener('scroll', () => {
+  let scroll = this.pageYOffset;
+  console.log(scroll);
+
+  if (scroll >= 1) {
+    header.style.top = '-' + (parseInt(getComputedStyle(headerTop).height) + 1 + 'px');
+    header.style.backgroundColor = 'rgba(0, 66, 70, 1)';
+  } else {
+    header.style.top = 0;
+    header.style.backgroundColor = 'transparent';
+  }
+})

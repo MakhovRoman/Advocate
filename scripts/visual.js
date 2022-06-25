@@ -86,3 +86,30 @@ window.addEventListener('scroll', () => {
     header.style.backgroundColor = 'transparent';
   }
 })
+
+
+
+//###################  ADVANTAGE  ###################
+
+const advantageItemsList = Array.from(document.getElementsByClassName('advantage__item'));
+
+//function for automatical grid making
+function makeContentGrid(target) {
+  let itemClassList = ['advantage__item_1', 'advantage__item_2', 'advantage__item_3'];
+  let count = 0;
+
+  for (let i = 1; i <= target.length; i++) {
+    count++;
+    if (count % 3 == 0) {
+      target[i-1].classList.add(itemClassList[2])
+    } else if (count % 2 == 0) {
+      target[i-1].classList.add(itemClassList[1]);
+    } else {
+      target[i-1].classList.add(itemClassList[0]);
+    }
+
+    if (count == 3) count = 0;
+  }
+}
+
+makeContentGrid(advantageItemsList);

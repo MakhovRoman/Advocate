@@ -50,9 +50,6 @@
             </a>
             <nav class="header__nav nav">
               <ul class="header__list nav__list">
-                <li class="nav__li">
-                  <a href="#" class="link nav__link">О нас</a>
-                </li>
                 <li class="nav__li" id="services">
                   <a href="#" class="link nav__link">Услуги <img src="pictures/icons/tab_menu.svg" alt="tab" class="tab-menu"></a>
                   <div class="header__subnav">
@@ -162,20 +159,28 @@
                   <a href="#" class="link nav__link">Контакты</a>
                 </li>
               </ul>
-
+              <a href="#" class="link consult__link form__button">Бесплатная консультация</a>
             </nav>
           </section>
         </div>
       </header>
       <section class="banner">
+        <!--
         <picture class="banner__picture">
           <source srcset="pictures/BG_1.jpg" media="(min-width: 800px)">
           <img src="pictures/BG_1.jpg" alt="backgroung" class="banner__img content__img">
         </picture>
+        -->
         <div class="banner__wrapper content__wrapper">
+          <div class="banner__background-photo">
+            <pictures>
+              <source media="(min-width: 800px)" srcset="pictures/BG_3.jpg">
+              <img src="pictures/BG_03.png" alt="" class="banner__background-img">
+            </pictures>
+          </div>
           <div class="banner__container content__container">
             <div class="banner__unit-text unit-text">
-              <h1 class="heading_large banner__heading_large">Адвокат Ломакин Игорь Игоревич</h1>
+              <h1 class="heading_large banner__heading_large"><span class="banner__heading_subheading">Адвокат</span>Игорь Ломакин</h1>
               <h3 class="heading_medium banner__heading_medium text_dark">97% решений в нашу пользу</h3>
             </div>
             <div class="banner__unit-form">
@@ -198,6 +203,7 @@
       </section>
       <section class="section__content section__chief">
         <div class="content__wrapper chief__wrapper">
+
           <div class="content__container chief__container">
             <div class="chief__photo-container">
               <picture class="chief__picture">
@@ -208,12 +214,83 @@
             <div class="chief__text-container">
               <div class="chief__unit_heading">
                 <h2 class="chief__heading_semilarge heading_semilarge">Вот уже 10 лет я успешно справляюсь с самыми сложными делами</h2>
-              </div>
-              <div class="chief__unit-content">
                 <p class="paragraph chief__paragraph">
                   Большой практический опыт помогает мне успешно защищать своих доверителей по уголовным и гражданским делам, так как мне известны все тонкости уголовного и гражданского судопроизводства!
                 </p>
               </div>
+              <div class="chief__unit-content">
+                <h2 class="heading_semilarge chief__heading_semilarge">
+                  Работаю по направлениям
+                </h2>
+                <ul class="chief__achives">
+                  <li class="chief__achives-li">
+                    <details class="chief__details">
+                      <summary class="chief__summary">
+                        <h3 class="heading_medium chief__heading_medium">Уголовные дела</h3>
+                      </summary>
+                      <ul class="details__ul">
+                        <li class="details__li">content</li>
+                        <li class="details__li">content</li>
+                        <li class="details__li">content</li>
+                        <li class="details__li">content</li>
+                        <li class="details__li">content</li>
+                        <li class="details__li">content</li>
+                        <li class="details__li">content</li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li class="chief__achives-li">
+                    <details class="chief__details">
+                      <summary class="chief__summary">
+                        <h3 class="heading_medium chief__heading_medium">Гражданские дела</h3>
+                      </summary>
+                      <ul class="details__ul">
+                        <li class="details__li">content</li>
+                        <li class="details__li">content</li>
+                        <li class="details__li">content</li>
+                        <li class="details__li">content</li>
+                        <li class="details__li">content</li>
+                        <li class="details__li">content</li>
+                        <li class="details__li">content</li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li class="chief__achives-li">
+                    <details class="chief__details">
+                      <summary class="chief__summary">
+                        <h3 class="heading_medium chief__heading_medium">Административные</h3>
+                      </summary>
+                      <ul class="details__ul">
+                        <li class="details__li">content</li>
+                        <li class="details__li">content</li>
+                        <li class="details__li">content</li>
+                        <li class="details__li">content</li>
+                        <li class="details__li">content</li>
+                        <li class="details__li">content</li>
+                        <li class="details__li">content</li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li class="chief__achives-li">
+                    <details class="chief__details">
+                      <summary class="chief__summary">
+                        <h3 class="heading_medium chief__heading_medium">Услуги для бизнеса</h3>
+                      </summary>
+                      <ul class="details__ul">
+                        <li class="details__li">Правовой аудит.</li>
+                        <li class="details__li">Правовое сопровождение налоговой проверки.</li>
+                        <li class="details__li">Правовое сопровождение вопросов с полицией.</li>
+                        <li class="details__li">Помощь после ареста счетов.</li>
+                        <li class="details__li">Работа с недобросовестными контрагентами.</li>
+                        <li class="details__li">Подбор решений в нестандартных задачах.</li>
+                        <li class="details__li">Комплексное абонентское правовое сопровождение вашего бизнеса. </li>
+                      </ul>
+                    </details>
+                  </li>
+                </ul>
+              </div>
+
+              <!--
               <ul class="chief__achives chief__unit-content">
                 <li class="chief__achives-li">
                   <span class="dot"></span>Адвокат адвокатской палаты города Москвы #77/8646
@@ -225,7 +302,7 @@
                   <span class="dot"></span>Руководитель службы правовой поддержки субъектов предпринимательской деятельности.
                 </li>
               </ul>
-              <!--
+
               <div class="chief__unit-content chief__quote">
                 <p class="chief__paragraph paragraph">
                   Принципиально важно, чтобы у каждого гражданина или организации была возможность отстоять свои права!
@@ -319,6 +396,15 @@
               </div>
             </div>
             <a href="#" class="link advantage__link">Все услуги</a>
+          </div>
+        </div>
+      </section>
+      <section class="section__content questions">
+        <div class="content__wrapper">
+          <div class="content__container questions__container">
+            <h1 class="heading_large questions__heading_large">
+              Любые вопросы юристу по телефону
+            </h1>
           </div>
         </div>
       </section>

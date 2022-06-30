@@ -14,14 +14,14 @@ function resizing(sample, target) {
 
 // delay when hover on element
 function hoverDelay(parrentElement, childrenList, childrenClassName, className, delay) {
-  let isOpen = false;
+  let isOpen  = false;
   let timerId;
 
   parrentElement.addEventListener('mouseover', e => {
-    let that = e.target;
+    let that  = e.target;
 
     if (!isOpen && that.classList.contains(childrenClassName)) {
-      isOpen = true;
+      isOpen  = true;
       timerId = setTimeout( () => {
 
         that.classList.add(className);
@@ -73,8 +73,8 @@ subnavTitleLi.forEach( (item, index) => {
 
 hoverDelay(subnavMenu, subnavTitleList, 'subnav__link', 'subnav-link_active', 500);
 window.addEventListener('DOMContentLoaded', () => resizing(headerWrapper, headerSubnav));
-window.addEventListener('resize', () => resizing(headerWrapper, headerSubnav));
-window.addEventListener('scroll', () => {
+window.addEventListener('resize',           () => resizing(headerWrapper, headerSubnav));
+window.addEventListener('scroll',           () => {
   let scroll = this.pageYOffset;
 
   if (scroll >= 1) {
@@ -230,3 +230,95 @@ class Accordion {
 document.querySelectorAll('details').forEach((el) => {
   new Accordion(el);
 });
+
+//###################  QUESTIONS  ###################
+
+const questsionsSliderItemsList = Array.from(document.getElementsByClassName('questions__slider-item'));
+let   translateSlider           = 0;
+const questionsForm             = getElement('questions__form');
+const questionsSliderWrapper    = getElement('questions__slider-wrapper');
+const questionsSliderContent    = getElement('questions__slider-content');
+const questionsControlContainer = getElement('questions__slider-control');
+const questionsControlForward   = getElement('questions__control_forward');
+const questionsControlBackward  = getElement('questions__control_backward');
+let   questionsCount            = 1;
+let   questionsCountArea        = getElement('questions__slider-count');
+let   questionsCountTotal       = getElement('questions__slider-total');
+
+function setSliderWrapperWidth(target, source) {
+  let sourceWidth    = getComputedStyle(source).width;
+  target.style.width = sourceWidth;
+}
+
+class Slider {
+  constructor(wrapper, content, sliderList, counterArea, counterTotal) {
+    this.wrapper      = wrapper;
+    this.content      = content;
+    this.counter      = 1;
+    this.counterArea  = counterArea;
+    this.counterTotal = counterTotal;
+    this.sliderList   = sliderList;
+  }
+
+  counterForward() {
+    this.counter++;
+    if (this.counter >= this.sliderList.length) this.counter = this.sliderList.length;
+    this.counterArea.textContent = this.counter;
+    this.moveSlider();
+    return this.counter;
+  }
+
+  counterBackward() {
+    this.counter--;
+    if (this.counter <= 1) this.counter = 1;
+    this.counterArea.textContent = this.counter;
+    this.moveSlider();
+    return this.counter;
+  }
+
+  showCountTotal() {
+    this.counterTotal.textContent = this.sliderList.length;
+  }
+
+  showCurrentCount() {
+    this.counterArea.textContent = this.counter;
+  }
+
+  setWrapperWidth() {
+    let max = 0;
+
+    //получаю ширину самого большого элемента
+    this.sliderList.forEach(item => {
+      console.log(parseFloat(getComputedStyle(item).width));
+      if (max < parseFloat(getComputedStyle(item).width)) {
+        max = parseFloat(getComputedStyle(item).width);
+      } else {
+        max = max;
+      }
+    });
+
+    //устанавливаю ширину каждого слайда по максимальному значению
+    this.sliderList.forEach(item => item.style.width = max + 'px');
+
+    //задаю ширину wrapper'a равной ширине самого большого слайдера
+    this.wrapper.style.width = max + 'px';
+  }
+
+  moveSlider() {
+    let i = this.counter;
+    this.content.style.transform = `translateX(-${(i - 1) * 100 / this.sliderList.length}%)`;
+  }
+}
+
+let questionsSlider = new Slider(questionsSliderWrapper, questionsSliderContent, questsionsSliderItemsList, questionsCountArea, questionsCountTotal);
+
+window.addEventListener('DOMContentLoaded',        ()  => {
+  questionsSlider.setWrapperWidth();
+  questionsSlider.showCurrentCount();
+  questionsSlider.showCountTotal();
+});
+window.addEventListener('resize',                  ()  => {
+  questionsSlider.setWrapperWidth();
+});
+questionsControlForward.addEventListener('click',  () => questionsSlider.counterForward());
+questionsControlBackward.addEventListener('click', () => questionsSlider.counterBackward());

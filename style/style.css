@@ -29,7 +29,7 @@ body {
 
 .link {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgba(255, 251, 250, 1)
 }
 
 .content__wrapper {
@@ -890,6 +890,7 @@ body {
 
 .contacts__map {
   grid-column: 7/13;
+  margin-top: 80px;
 }
 
 .contacts__heading_large {
@@ -936,4 +937,103 @@ body {
   display: block;
   width: 20px;
   height: 20px;
+}
+
+/* #####################################
+############# Consultation #############
+######################################## */
+
+.consultation {
+  background-image: url('/pictures/BG_3_dark.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: rgba(224, 219, 218, 1);
+}
+
+.consultation__unit-heading {
+  grid-column: 1/13;
+}
+
+.consultation__heading_large {
+  color: rgba(255, 251, 250, 1);
+  margin-bottom: 16px;
+}
+
+.consultation__unit-form {
+  margin-top: 60px;
+}
+
+
+/* #####################################
+################ Footer ################
+######################################## */
+
+.footer {
+  background-color: rgba(80, 82, 82, 1);
+}
+
+.footer__wrapper {
+  padding: 120px 0;
+}
+
+.footer__unit {
+  grid-column: 1/13;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__top {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(224, 219, 218, 0.3);
+}
+
+.footer__nav {
+  height: 100%;
+  display: flex;
+}
+
+.footer__link {
+  position: relative;
+  padding: 0 16px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.footer__link:last-child {
+ padding-right: 0;
+}
+
+.footer__link:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  width: calc(100% - 32px);
+  height: 2px;
+  background-color: rgba(255, 251, 250, 1);
+}
+
+.footer__link:last-child:hover::after {
+  width: calc(100% - 16px);
+}
+
+.footer__contacts {
+  margin-top: 0;
+}
+
+.footer__bottom {
+  margin-top: 144px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(224, 219, 218, 0.3);
+}
+
+.footer__creators {
+  color:rgba(189, 189, 189, 1);
+  margin-top: 16px;
+  user-select: none;
+}
+
+.nelset__link {
+  color: rgba(189, 189, 189, 1);
 }

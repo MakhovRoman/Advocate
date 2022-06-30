@@ -411,7 +411,7 @@ body {
   right: 64px;
   height: 100%;
   width: 20px;
-  background-image: url('/pictures/icons/arrow_R.svg');
+  background-image: url('pictures/icons/arrow_R.svg');
   background-repeat: no-repeat;
   background-position: center center;
   transition: 0.3s;
@@ -592,7 +592,7 @@ body {
 .input__radio-label::before {
   position: absolute;
   content: "";
-  background-image: url('/pictures/icons/radio_deactive.svg');
+  background-image: url('pictures/icons/radio_deactive.svg');
   background-repeat: no-repeat;
   top: -2px;
   left: -28px;
@@ -601,7 +601,7 @@ body {
 }
 
 .input__radio:checked + .input__radio-label::before {
-  background-image: url('/pictures/icons/radio_active.svg');
+  background-image: url('pictures/icons/radio_active.svg');
 }
 
 .banner__input-submit {
@@ -682,7 +682,7 @@ body {
   position: absolute;
   width: 4px;
   height: 4px;
-  background-image: url('/pictures/icons/dote__marker.svg');
+  background-image: url('pictures/icons/dote__marker.svg');
   /*top: calc(24px + 27px / 2 - 4px / 2);*/
   top: 0;
   left: 0;
@@ -705,7 +705,7 @@ body {
   left: 5px;
   width: 8px;
   height: 12px;
-  background-image: url('/pictures/icons/details.svg');
+  background-image: url('pictures/icons/details.svg');
   background-repeat: no-repeat;
   transition: 0.4s ease-in-out;
 }
@@ -732,7 +732,7 @@ body {
 }
 
 .details__li::before {
-  content: url('/pictures/icons/dote__marker.svg');
+  content: url('pictures/icons/dote__marker.svg');
   position: absolute;
   top: -4px;
   left: 8px;
@@ -808,7 +808,7 @@ body {
 .questions {
   height: 787px;
   box-sizing: border-box;
-  background-image: url('/pictures/BG_2_dark.jpg');
+  background-image: url('pictures/BG_2_dark.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   color: rgb(255, 255, 255);
@@ -823,12 +823,12 @@ body {
 }
 
 .questions__form-label::before {
-  background-image: url('/pictures/icons/radio_deactive.svg');
+  background-image: url('pictures/icons/radio_deactive.svg');
   left: -36px;
 }
 
 .questions__input-radio:checked + .questions__form-label::before {
-  background-image: url('/pictures/icons/radio_active.svg');
+  background-image: url('pictures/icons/radio_active.svg');
 }
 
 .slider__wrapper {
@@ -944,7 +944,7 @@ body {
 ######################################## */
 
 .consultation {
-  background-image: url('/pictures/BG_3_dark.jpg');
+  background-image: url('pictures/BG_3_dark.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   color: rgba(224, 219, 218, 1);

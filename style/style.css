@@ -32,8 +32,16 @@ body {
   color: rgba(255, 251, 250, 1)
 }
 
+.header__link:hover {
+  color: rgb(0, 178, 191);
+}
+
+.header__icon {
+  fill: rgb(0, 178, 191);
+}
+
 .content__wrapper {
-  max-width: 1504px;
+  width: 1504px;
   margin: 0 auto;
 }
 
@@ -806,7 +814,6 @@ body {
 /* ############### Questions ############### */
 
 .questions {
-  height: 787px;
   box-sizing: border-box;
   background-image: url(../pictures/BG_2_dark.jpg);
   background-repeat: no-repeat;
@@ -1036,4 +1043,121 @@ body {
 
 .nelset__link {
   color: rgba(189, 189, 189, 1);
+}
+
+
+
+/*###############################################################################################
+##################################  MEDIAQUERY  #################################################
+###############################################################################################*/
+
+@media(max-width: 1600px) {
+  .content__wrapper {
+    width: 94vw;
+  }
+
+  .content__container {
+    grid-column-gap: 2vw;
+  }
+
+  .banner__container {
+    height: 31.25vw;
+  }
+
+  .heading_large {
+    font-size: 3.5vw;
+    line-height: 4.125vw;
+  }
+
+  .heading_semilarge {
+    font-size: 2vw;
+    line-height: 3vw;
+  }
+
+  .paragraph {
+    font-size: 1.125vw;
+    line-height: 1.6875vw;
+  }
+
+  .input__text_style {
+    font-size: 1vw;
+    line-height: 1.6875vw;
+  }
+
+  .form__button {
+    width: 16.5vw;
+  }
+
+  .form__unit-personal {
+    margin-top: 2vw;
+  }
+
+  .consult__link {
+    width: 20.3125vw;
+  }
+
+  .section__content {
+    padding: 9vw 0;
+  }
+
+  .chief__paragraph {
+    margin-top: 2vw;
+  }
+
+  .chief__unit-content {
+    margin-top: 7.5vw;
+  }
+
+  .chief__achives-li {
+    font-size: 1.125vw;
+    line-height: 1.6875vw;
+    padding: 1.5vw 0;
+  }
+
+  .details__ul {
+    margin-top: 2.25vw;
+  }
+
+  .details__li {
+    padding-left: 2.25vw;
+  }
+
+  .advantage__heading_large {
+    margin-bottom: 1vw;
+  }
+
+  .advantage__content {
+    grid-row-gap: 5vw;
+    grid-column-gap: 2vw;
+    margin: 5vw 0;
+  }
+
+  .slider__wrapper {
+    margin: 5vw 0;
+  }
+
+  .questions__heading_semilarge {
+    margin-left: 5.6875vw;
+  }
+
+  .questions__form-unit {
+    margin-left: 2.25vw;
+    margin-top: 2vw;
+  }
+
+  .questions__form-label::before {
+    left: -2.25vw;
+  }
+
+  .contacts__heading {
+    padding-bottom: 5vw;
+  }
+
+  .contacts__unit-links {
+    margin-top: 2.5vw;
+  }
+
+  .contacts__textContent {
+    margin-top: 7vw;
+  }
 }

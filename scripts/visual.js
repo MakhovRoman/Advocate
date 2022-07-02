@@ -38,7 +38,7 @@ function hoverDelay(parrentElement, childrenList, childrenClassName, className, 
     if(!e.relatedTarget.classList.contains('subnav__content') && !e.relatedTarget.classList.contains('subnav__title-list')) {
       let that = e.target;
       clearTimeout(timerId);
-      isOpen = false;
+      isOpen   = false;
 
       setTimeout( () => {
         if (that.classList.contains(className)) {
@@ -114,6 +114,7 @@ function makeContentGrid(target) {
 makeContentGrid(advantageItemsList);
 
 //###################  DETAILS ANIMATION  ###################
+
 class Accordion {
   constructor(el) {
     // Store the <details> element
@@ -289,7 +290,6 @@ class Slider {
 
     //получаю ширину самого большого элемента
     this.sliderList.forEach(item => {
-      console.log(parseFloat(getComputedStyle(item).width));
       if (max < parseFloat(getComputedStyle(item).width)) {
         max = parseFloat(getComputedStyle(item).width);
       } else {

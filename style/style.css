@@ -11,6 +11,20 @@
   --header-padding: 32px;
   --header-top-height: 40px;
   --header-bot-height: 80px;
+  --size-16px: 16px;
+  --size-18px: 18px;
+  --size-24px: 24px;
+  --size-27px: 27px;
+  --size-32px: 32px;
+  --size-36px: 36px;
+  --size-38px: 38px;
+  --size-48px: 48px;
+  --size-56px: 56px;
+  --size-64px: 64px;
+  --size-66px: 66px;
+  --size-72px: 72px;
+  --size-80px: 80px;
+  --size-85px: 85px;
 }
 
 * {
@@ -48,7 +62,7 @@ body {
 .content__container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 32px;
+  grid-column-gap: var(--size-32px);
   height: fit-content;
   width: 100%;
 }
@@ -58,39 +72,41 @@ body {
 }
 
 .heading_large {
-  font-size: 56px;
-  line-height: 66px;
+  font-size: var(--size-56px);
+  line-height: var(--size-66px);
   font-weight: 700;
 }
 
 .heading_semilarge {
-  font-size: 32px;
-  line-height: 48px;
+  font-size: var(--size-32px);
+  line-height: var(--size-48px);
   font-weight: 700;
 }
 
 .heading_medium {
-  font-size: 24px;
-  line-height: 36px;
+  font-size: var(--size-24px);
+  line-height: var(--size-36px);
   font-weight: 400;
 }
 
 .paragraph {
-  font-size: 18px;
-  line-height: 27px;
+  font-size: var(--size-18px);
+  line-height: var(--size-27px);
 }
 
 .input__text {
   height: 64px;
-  padding: 18.5px 16px;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
   outline: unset;
 }
 
 .input__text_style {
   color: rgba(189, 189, 189, 1);
   box-sizing: border-box;
-  font-size: 16px;
-  line-height: 27px;
+  font-size: var(--size-16px);
+  line-height: var(--size-27px);
   background-color: transparent;
   border: 1px solid rgba(224, 219, 218, 0.3);
 }
@@ -142,8 +158,8 @@ body {
 }
 
 .section__heading_medium {
-  font-size: 24px;
-  line-height: 36px;
+  font-size: var(--size-24px);
+  line-height: var(--size-36px);
 }
 
 .slider__control-button {
@@ -152,8 +168,8 @@ body {
   border: 1px solid rgba(255, 251, 250, 1);
   color: rgba(255, 251, 250, 1);
   cursor: pointer;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: var(--size-18px);
+  line-height: var(--size-27px);
   font-weight: 400;
   font-family: 'Raleway';
   display: flex;
@@ -226,8 +242,8 @@ body {
 }
 
 .header__text_contact {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: var(--size-16px);
+  line-height: var(--size-24px);
   display: flex;
   align-items: center;
   margin-left: 10px;
@@ -322,7 +338,7 @@ body {
   height: 100%;
   padding: 0 16px;
   color: rgba(255, 251, 250, 1);
-  font-size: 16px;
+  font-size: var(--size-16px);
   box-sizing: border-box;
   position: relative;
 }
@@ -379,7 +395,10 @@ body {
 }
 
 .subnav__wrapper {
-  padding: 64px 0;
+  padding: var(--size-64px) 0;
+  width: 78.3333%;
+  max-width: 1504px;
+  margin: 0 auto;
 }
 
 .subnav__content {
@@ -397,13 +416,13 @@ body {
 }
 
 .subnav__title-li {
-  font-size: 24px;
-  line-height: 36px;
+  font-size: var(--size-24px);
+  line-height: var(--size-36px);
   position: relative;
 }
 
 .subnav__link {
-  padding: 16px 64px 16px 0;
+  padding: var(--size-16px) var(--size-64px) var(--size-16px) 0;
   display: flex;
   justify-content: space-between;
 }
@@ -416,7 +435,7 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  right: 64px;
+  right: var(--size-64px);
   height: 100%;
   width: 20px;
   background-image: url(../pictures/icons/arrow_R.svg);
@@ -432,9 +451,9 @@ body {
 }
 
 .subnav__child-list {
-  padding-top: 16px;
+  padding-top: var(--size-16px);
   position: absolute;
-  left: calc(100% + 64px);
+  left: calc(100% + var(--size-64px));
   top: 0;
   width: fit-content;
   list-style: none;
@@ -456,8 +475,8 @@ body {
 }
 
 .subnav__child-li {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: var(--size-16px);
+  line-height: var(--size-24px);
   width: fit-content;
   display: flex;
 }
@@ -558,16 +577,16 @@ body {
 }
 
 .banner__heading_large {
-  margin-bottom: 16px;
+  margin-bottom: var(--size-16px);
   display: flex;
   flex-direction: column;
-  font-size: 72px;
-  line-height: 85px;
+  font-size: var(--size-72px);
+  line-height: var(--size-85px);
 }
 
 .banner__heading_subheading {
-  font-size: 32px;
-  line-height: 38px;
+  font-size: var(--size-32px);
+  line-height: var(--size-38px);
   font-weight: 500;
 }
 
@@ -585,7 +604,7 @@ body {
 
 .form__unit-personal {
   grid-column: 1/7;
-  margin-top: 32px;
+  margin-top: var(--size-32px);
   padding-left: 28px;
 }
 
@@ -655,9 +674,9 @@ body {
 }
 
 .chief__achives-li {
-  font-size: 18px;
-  line-height: 27px;
-  padding: 24px 0;
+  font-size: var(--size-18px);
+  line-height: var(--size-27px);
+  padding: var(--size-24px) 0;
   box-sizing: border-box;
   position: relative;
 }
@@ -697,7 +716,7 @@ body {
 }
 
 .chief__paragraph {
-  margin-top: 32px;
+  margin-top: var(--size-32px);
 }
 
 .chief__summary {
@@ -731,12 +750,12 @@ body {
 
 .details__ul {
   list-style: none;
-  margin-top: 36px;
+  margin-top: var(--size-36px);
 }
 
 .details__li {
   position: relative;
-  padding-left: 36px;
+  padding-left: var(--size-36px);
 }
 
 .details__li::before {
@@ -750,7 +769,7 @@ body {
 
 
 .details__li + .details__li {
-  margin-top: 24px;
+  margin-top: var(--size-24px);
 }
 
 
@@ -765,17 +784,17 @@ body {
 }
 
 .advantage__heading_large {
-  margin-bottom: 16px;
+  margin-bottom: var(--size-16px);
 }
 
 .advantage__content {
   grid-column: 1/12;
   display: grid;
   grid-template-columns: repeat(11, 1fr);
-  grid-row-gap: 80px;
-  grid-column-gap: 32px;
+  grid-row-gap: var(--size-80px);
+  grid-column-gap: var(--size-32px);
   height: fit-content;
-  margin: 80px 0;
+  margin: var(--size-80px) 0;
 }
 
 .advantage__item_1 {
@@ -795,8 +814,8 @@ body {
 }
 
 .advantage__heading_medium {
-  margin-top: 24px;
-  margin-bottom: 16px;
+  margin-top: var(--size-24px);
+  margin-bottom: var(--size-16px);
 }
 
 .advantage__link {
@@ -831,7 +850,7 @@ body {
 
 .questions__form-label::before {
   background-image: url(../pictures/icons/radio_deactive.svg);
-  left: -36px;
+  left: calc(0px - var(--size-36px));
 }
 
 .questions__input-radio:checked + .questions__form-label::before {
@@ -839,7 +858,7 @@ body {
 }
 
 .slider__wrapper {
-  margin: 80px 0;
+  margin: var(--size-80px) 0;
   position: relative;
 }
 
@@ -852,12 +871,12 @@ body {
 }
 
 .questions__form-unit {
-  margin-left: 36px;
-  margin-top: 32px;
+  margin-left: var(--size-36px);
+  margin-top: var(--size-32px);
 }
 
-.questions__form-utin + .questions__form-unit {
-  margin-top: 24px;
+.questions__form-unit + .questions__form-unit {
+  margin-top: var(--size-24px);
 }
 
 .questions__slider-control {
@@ -886,7 +905,7 @@ body {
 
 .contacts__heading {
   grid-column: 1/13;
-  padding-bottom: 80px;
+  padding-bottom: var(--size-80px);
   border-bottom: 1px solid rgba(224, 219, 218, 0.3);
 }
 
@@ -897,7 +916,7 @@ body {
 
 .contacts__map {
   grid-column: 7/13;
-  margin-top: 80px;
+  margin-top: var(--size-80px);
 }
 
 .contacts__heading_large {
@@ -929,10 +948,10 @@ body {
   width: fit-content;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: var(--size-18px);
+  line-height: var(--size-27px);
   color: rgba(255, 251, 250, 1);
-  margin-top: 24px;
+  margin-top: var(--size-24px);
 }
 
 .navigation__icon {
@@ -963,7 +982,7 @@ body {
 
 .consultation__heading_large {
   color: rgba(255, 251, 250, 1);
-  margin-bottom: 16px;
+  margin-bottom: var(--size-16px);
 }
 
 .consultation__unit-form {
@@ -977,9 +996,6 @@ body {
 
 .footer {
   background-color: rgba(80, 82, 82, 1);
-}
-
-.footer__wrapper {
   padding: 120px 0;
 }
 
@@ -991,7 +1007,7 @@ body {
 }
 
 .footer__top {
-  padding: 16px 0;
+  padding: var(--size-16px) 0;
   border-bottom: 1px solid rgba(224, 219, 218, 0.3);
 }
 
@@ -1031,13 +1047,13 @@ body {
 
 .footer__bottom {
   margin-top: 144px;
-  padding-bottom: 32px;
+  padding-bottom: var(--size-32px);
   border-bottom: 1px solid rgba(224, 219, 218, 0.3);
 }
 
 .footer__creators {
   color:rgba(189, 189, 189, 1);
-  margin-top: 16px;
+  margin-top: var(--size-16px);
   user-select: none;
 }
 
@@ -1052,44 +1068,34 @@ body {
 ###############################################################################################*/
 
 @media(max-width: 1600px) {
-  .content__wrapper {
-    width: 94vw;
+
+  :root {
+    --size-16px: 1vw;
+    --size-18px: 1.125vw;
+    --size-24px: 1.5vw;
+    --size-27px: 1.6875vw;
+    --size-32px: 2vw;
+    --size-36px: 2.25vw;
+    --size-38px: 2.375vw;
+    --size-48px: 3vw;
+    --size-56px: 3.5vw;
+    --size-64px: 4vw;
+    --size-66px: 4.125vw;
+    --size-72px: 4.5vw;
+    --size-80px: 5vw;
+    --size-85px: 5.3125vw;
   }
 
-  .content__container {
-    grid-column-gap: 2vw;
+  .content__wrapper {
+    width: 94vw;
   }
 
   .banner__container {
     height: 31.25vw;
   }
 
-  .heading_large {
-    font-size: 3.5vw;
-    line-height: 4.125vw;
-  }
-
-  .heading_semilarge {
-    font-size: 2vw;
-    line-height: 3vw;
-  }
-
-  .paragraph {
-    font-size: 1.125vw;
-    line-height: 1.6875vw;
-  }
-
-  .input__text_style {
-    font-size: 1vw;
-    line-height: 1.6875vw;
-  }
-
   .form__button {
     width: 16.5vw;
-  }
-
-  .form__unit-personal {
-    margin-top: 2vw;
   }
 
   .consult__link {
@@ -1100,64 +1106,35 @@ body {
     padding: 9vw 0;
   }
 
-  .chief__paragraph {
-    margin-top: 2vw;
-  }
-
   .chief__unit-content {
     margin-top: 7.5vw;
-  }
-
-  .chief__achives-li {
-    font-size: 1.125vw;
-    line-height: 1.6875vw;
-    padding: 1.5vw 0;
-  }
-
-  .details__ul {
-    margin-top: 2.25vw;
-  }
-
-  .details__li {
-    padding-left: 2.25vw;
-  }
-
-  .advantage__heading_large {
-    margin-bottom: 1vw;
-  }
-
-  .advantage__content {
-    grid-row-gap: 5vw;
-    grid-column-gap: 2vw;
-    margin: 5vw 0;
-  }
-
-  .slider__wrapper {
-    margin: 5vw 0;
   }
 
   .questions__heading_semilarge {
     margin-left: 5.6875vw;
   }
 
-  .questions__form-unit {
-    margin-left: 2.25vw;
-    margin-top: 2vw;
-  }
-
-  .questions__form-label::before {
-    left: -2.25vw;
-  }
-
-  .contacts__heading {
-    padding-bottom: 5vw;
-  }
-
-  .contacts__unit-links {
-    margin-top: 2.5vw;
-  }
-
   .contacts__textContent {
     margin-top: 7vw;
+  }
+
+  .contacts__paragraph {
+    margin-top: 3.125vw;
+  }
+
+  .contacts__navigation {
+    margin-top: 5.75vw;
+  }
+
+  .consultation__unit-form {
+    margin-top: 3.75vw;
+  }
+
+  .footer {
+    padding: 7.5vw 0;
+  }
+
+  .footer__bottom {
+    margin-top: 9vw;
   }
 }

@@ -5,6 +5,11 @@ function getElement(selector) {
   return document.querySelector('.' + selector);
 }
 
+// get element height
+function getElementHeight(el) {
+  return parseInt(getComputedStyle(el).height);
+}
+
 // change headerSubnav width when page is resizing
 function resizing(sample, target) {
   let padding         = getComputedStyle(sample).paddingLeft;
@@ -58,33 +63,58 @@ const headerSubnav    = getElement('header__subnav');
 const headerTop       = getElement('header__top');
 const headerBot       = getElement('header__bot');
 const subnavMenu      = getElement('subnav__title-list');
+const banner          = getElement('banner');
+const chief           = getElement('section__chief');
 let   subnavTitleList = Array.from(document.getElementsByClassName('subnav__title-link'));
 let   subnavTitleLi   = Array.from(document.getElementsByClassName('subnav__title-li'));
+let   currentScroll   = 0;
 
 
 //top position of subnavMenu
-subnavTitleLi.forEach( (item, index) => {
-  let child = item.querySelector('.subnav__child-list');
-  if(child) {
-    child.style.top = -index * parseInt(getComputedStyle(item).height) + 'px';
-  }
-})
-
+function setSubnavTopPosition () {
+  subnavTitleLi.forEach( (item, index) => {
+    let child = item.querySelector('.subnav__child-list');
+    if(child) {
+      child.style.top = -index * getElementHeight(item) + 'px';
+    }
+  })
+}
 
 hoverDelay(subnavMenu, subnavTitleList, 'subnav__link', 'subnav-link_active', 500);
-window.addEventListener('DOMContentLoaded', () => resizing(headerWrapper, headerSubnav));
-window.addEventListener('resize',           () => resizing(headerWrapper, headerSubnav));
+window.addEventListener('DOMContentLoaded', () => {
+  resizing(headerWrapper, headerSubnav);
+  setSubnavTopPosition();
+});
+window.addEventListener('resize',           () => {
+  resizing(headerWrapper, headerSubnav);
+  setSubnavTopPosition();
+});
 window.addEventListener('scroll',           () => {
   let scroll = this.pageYOffset;
+  let checkPoint = getElementHeight(banner) + getElementHeight(chief);
 
   if (scroll >= 1) {
-    header.style.top = '-' + (parseInt(getComputedStyle(headerTop).height) + 1 + 'px');
+    header.style.top = '-' + (getElementHeight(headerTop) + 1) + 'px';
     header.style.backgroundColor = 'rgba(0, 66, 70, 1)';
   } else {
     header.style.top = 0;
     header.style.backgroundColor = 'transparent';
   }
-})
+
+  if (scroll > checkPoint)  {
+    header.style.top = '-' + getElementHeight(header) + 'px';
+    currentScroll = Math.max(scroll, currentScroll);
+
+    if (currentScroll > scroll) {
+      header.style.top = '-' + (getElementHeight(headerTop) + 1) + 'px';
+      currentScroll = scroll;
+    }
+
+  } else if (scroll <= checkPoint && scroll >= 1) {
+    header.style.top = '-' + (getElementHeight(headerTop) + 1) + 'px';
+  }
+
+});
 
 
 
